@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: resources-burner-5uue
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: resources-burner-5uue
+    app.kubernetes.io/part-of: load-app-73a388ed-93a8-4acf-b7d6-8831890bdfcd
+  name: resources-burner-5uue
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: resources-burner-5uue
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: resources-burner-5uue
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
